@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
       this.notData = true;
       this.data = {
         title: res.title,
-        item1: res.data
+        item1: res.item1
       }
     }, (err) => {
       Materialize.toast('Internal Server Error', 4000)
@@ -50,7 +50,12 @@ export class HomeComponent implements OnInit {
   }
 
   submit(data) {
-    console.log("update data", data)
+    console.log("update data", data);
+    this.appService.updateData('home', data).then((res) => {
+      console.log("res");
+      Materialize.toast('Home component updated', 4000);
+      this.backToReadMode();
+    });
   }
 
 }

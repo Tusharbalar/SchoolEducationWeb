@@ -18,4 +18,11 @@ export class AppService {
     });
   }
 
+  updateData(urlName, updatedData) {
+    return database().ref(urlName).update(updatedData).then((res) => {
+      console.log("SASASAS", res);
+      return res;
+    })
+  }
+
 }
