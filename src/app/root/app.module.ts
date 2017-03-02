@@ -11,8 +11,8 @@ import { HomeComponent } from '../component/home/home.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from '../component/contact/contact.component';
 
-import { AppService } from '../../service/app.service';
-import { firebaseConfig } from '../../service/firebase.config';
+import { AppService } from '../service/app.service';
+import { firebaseConfig } from '../service/firebase.config';
 import { AngularFireModule } from 'angularfire2';
 
 @NgModule({
