@@ -11,6 +11,10 @@ import { HomeComponent } from './home/home.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 
+import { AppService } from '../service/app.service';
+import { firebaseConfig } from '../service/firebase.config';
+import { AngularFireModule } from 'angularfire2';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,9 +27,11 @@ import { ContactComponent } from './contact/contact.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: true })
+    RouterModule.forRoot(rootRouterConfig, { useHash: true }),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [
+    AppService
   ],
   bootstrap: [ AppComponent ]
 })
