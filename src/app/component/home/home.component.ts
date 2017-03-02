@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../../service/app.service';
+import { AppService } from '../../../service/app.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { initializeApp, database } from 'firebase';
 

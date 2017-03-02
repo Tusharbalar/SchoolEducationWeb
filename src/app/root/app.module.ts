@@ -6,13 +6,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
-import { AboutComponent } from './about/about.component';
-import { HomeComponent } from './home/home.component';
+import { AboutComponent } from '../component/about/about.component';
+import { HomeComponent } from '../component/home/home.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from '../component/contact/contact.component';
 
-import { AppService } from '../service/app.service';
-import { firebaseConfig } from '../service/firebase.config';
+import { AppService } from '../../service/app.service';
+import { firebaseConfig } from '../../service/firebase.config';
 import { AngularFireModule } from 'angularfire2';
 
 @NgModule({
