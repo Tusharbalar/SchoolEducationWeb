@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../service/app.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { initializeApp, database } from 'firebase';
-import * as firebase from 'firebase';
+
+declare const Materialize;
 
 @Component({
   selector: 'home',
@@ -13,7 +14,8 @@ import * as firebase from 'firebase';
 export class HomeComponent implements OnInit {
 
   public notData: boolean = false;
-  data;
+  public data;
+  public title;
 
   constructor(private appService: AppService) {
 
@@ -21,11 +23,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.appService.getHomeData().then((res) => {
-      console.log("QQQQQ", res);
       this.notData = true;
       this.data = res.data;
+      this.title = res.title;
     }, (err) => {
-
+      Materialize.toast('Internal Server Error', 4000)
     });
   }
 

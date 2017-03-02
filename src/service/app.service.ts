@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
-import { initializeApp, database } from 'firebase';
+import { AngularFire } from 'angularfire2';
+import { database } from 'firebase';
 
 @Injectable()
 export class AppService {
