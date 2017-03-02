@@ -12,3 +12,11 @@ header, main, footer {
 nav .brand-logo {
   padding-left: 350px;
 }
+
+.side-nav a {
+  color: #3F51B5;
+}
+
+.side-nav.fixed {
+  background-color: rgb(235, 235, 235);
+}

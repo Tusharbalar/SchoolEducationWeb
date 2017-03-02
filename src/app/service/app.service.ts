@@ -11,8 +11,8 @@ export class AppService {
 
   allData = [];
 
-  getHomeData() {
-    return database().ref('home').once('value').then((snapshot) => {
+  getHomeData(urlName) {
+    return database().ref(urlName).once('value').then((snapshot) => {
       console.log("AAAAA", snapshot.val());
       return snapshot.val();
     });

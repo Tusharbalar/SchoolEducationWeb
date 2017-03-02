@@ -13,7 +13,7 @@
 <div class="container" style="padding-top:25px">
   <div class="row">
     <div class="col s10 offset-s6">
-      <a class="btn-floating waves-effect waves-light" (click)="edit()">
+      <a class="btn-floating waves-effect waves-light" (click)="edit()"  *ngIf='notData'>
         <i class="material-icons">mode_edit</i>
       </a>
     </div>

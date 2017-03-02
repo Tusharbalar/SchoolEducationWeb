@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.appService.getHomeData().then((res) => {
+    this.appService.getHomeData('home').then((res) => {
       this.notData = true;
       this.data = res.data;
       this.title = res.title;

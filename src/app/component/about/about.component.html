@@ -1,2 +1,26 @@
-<h3>About Component</h3>
-<p>This is the about component!</p>
+<div class="preloader-wrapper active" *ngIf='!notData'>
+  <div class="spinner-layer spinner-red-only">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="padding-top:25px">
+  <div class="row">
+    <div class="col s10 offset-s6">
+      <a class="btn-floating waves-effect waves-light" (click)="edit()"  *ngIf='notData'>
+        <i class="material-icons">mode_edit</i>
+      </a>
+    </div>
+    <div class="col l10">
+      <p><b>{{data.heading}}</b></p>
+    </div>
+    <div class="col l10"><p>{{data.list}}</p></div>
+    <div class="col l10"><p>{{data.ourService}}</p></div>
+  </div>
+</div>
