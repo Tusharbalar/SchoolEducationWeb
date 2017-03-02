@@ -1,22 +1,20 @@
-<h3>
-  Angular 2 Seed
-</h3>
-<nav>
-	<a [routerLink]="['/']">
-    Home
-  </a>
-  |
-	<a [routerLink]="['/about']">
-    About
-  </a>
-  |
-	<a [routerLink]="['/github', 'angular']">
-    Github Repos
-  </a>
-  |
-	<a [routerLink]="['/contact']">
-    Contact Us
-  </a>
+<nav class="tb-grey" role="navigation">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Yugma</a>
+    <a href="#" id="logo-container" data-activates="slide-out" class="button-collapse">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul id="slide-out" class="side-nav fixed" >
+      <li><a [routerLink]="['/']" class="waves-effect waves-teal"><i class="material-icons">home</i>Home</a></li>
+      <li><a [routerLink]="['/complaint']" class="waves-effect waves-teal"><i class="material-icons">thumb_down</i>
+        All Complaints</a>
+      </li>
+      <li><a [routerLink]="['/add-management']" class="waves-effect waves-teal"><i class="material-icons">group add</i>Add Management</a></li>
+      <li><a [routerLink]="['/add-staff']" class="waves-effect waves-teal"><i class="material-icons">group add</i>Add Staff</a></li>
+      <li class="hide-on-large-only"><a (click)="logout()" class="waves-effect waves-teal"><i class="material-icons">power_settings_new</i>Logout</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <main>
