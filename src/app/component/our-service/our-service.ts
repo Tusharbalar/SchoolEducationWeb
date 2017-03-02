@@ -6,12 +6,12 @@ import { initializeApp, database } from 'firebase';
 declare const Materialize;
 
 @Component({
-  selector: 'about',
-  styleUrls: ['./about.component.css'],
-  templateUrl: './about.component.html'
+  selector: 'our-service',
+  styleUrls: ['./our-service.css'],
+  templateUrl: './our-service.html'
 })
 
-export class AboutComponent implements OnInit {
+export class OurService implements OnInit {
 
   public notData: boolean = false;
   public data = { };

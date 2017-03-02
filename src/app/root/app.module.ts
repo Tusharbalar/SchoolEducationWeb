@@ -6,7 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
-import { AboutComponent } from '../component/about/about.component';
+import { OurService } from '../component/our-service/our-service';
 import { HomeComponent } from '../component/home/home.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from '../component/contact/contact.component';
@@ -18,7 +18,7 @@ import { AngularFireModule } from 'angularfire2';
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
+    OurService,
     HomeComponent,
     ContactComponent
   ],
