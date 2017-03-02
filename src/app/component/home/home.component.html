@@ -11,15 +11,31 @@
 </div>
 
 <div class="container" style="padding-top:25px">
-  <div class="row">
+  <div class="row" *ngIf="readMode">
     <div class="col s10 offset-s6">
       <a class="btn-floating waves-effect waves-light" (click)="edit()"  *ngIf='notData'>
         <i class="material-icons">mode_edit</i>
       </a>
     </div>
     <div class="col l10">
-      <p><b>{{title}}</b></p>
+      <p><b>{{data.title}}</b></p>
     </div>
-    <div class="col l10"><p>{{data}}</p></div>
+    <div class="col l10"><p>{{data.item1}}</p></div>
+  </div>
+  <div class="row" *ngIf="editMode">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea active" name="item1" [(ngModel)]="data.item1"></textarea>
+          <label class="active" for="textarea1">Home Data</label>
+        </div>
+      </div>
+      <a class="btn waves-effect waves-light" (click)="backToReadMode()">
+        <i class="material-icons left">arrow_back</i> Go Back
+      </a>
+      <a class="btn waves-effect waves-light" (click)="submit(data)">
+        <i class="material-icons left">arrow_back</i> Submit
+      </a>
+    </form>
   </div>
 </div>

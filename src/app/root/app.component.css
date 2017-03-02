@@ -20,3 +20,15 @@ nav .brand-logo {
 .side-nav.fixed {
   background-color: rgb(235, 235, 235);
 }
+
+.side-nav li>a>i, .side-nav li>a>[class^="mdi-"], .side-nav li>a>[class*="mdi-"], .side-nav li>a>i.material-icons {
+  color: #3F51B5;
+}
+
+.side-nav li>a {
+  border-bottom: 1px solid;
+}
+
+nav {
+ background-color: rgba(63, 81, 181, 0.74);
+}
