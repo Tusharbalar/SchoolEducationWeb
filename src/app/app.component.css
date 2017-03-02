@@ -7,3 +7,7 @@ header, main, footer {
     padding-left: 0;
   }
 }
+
+nav .brand-logo {
+  padding-left: 350px;
+}
