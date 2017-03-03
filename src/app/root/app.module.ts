@@ -11,6 +11,7 @@ import { HomeComponent } from '../component/home/home.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ProfessionalDevelopment } from '../component/professional-development/professional-development';
 import { MyGoodSchool } from '../component/my-good-school/school';
+import { SchoolAndClient } from '../component/school-and-client/school-and-client';
 
 import { AppService } from '../service/app.service';
 import { firebaseConfig } from '../service/firebase.config';
@@ -22,7 +23,8 @@ import { AngularFireModule } from 'angularfire2';
     OurService,
     HomeComponent,
     ProfessionalDevelopment,
-    MyGoodSchool
+    MyGoodSchool,
+    SchoolAndClient
   ],
   imports: [
     BrowserModule,
