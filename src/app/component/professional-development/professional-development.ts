@@ -15,7 +15,7 @@ declare let $;
 export class ProfessionalDevelopment implements OnInit {
 
   public notData: boolean = false;
-  public ourService = { };
+  public profe_dev = { };
 
   public readMode: boolean = true;
   public editMode: boolean = false;
@@ -25,20 +25,17 @@ export class ProfessionalDevelopment implements OnInit {
   }
 
   ngOnInit() {
-    this.appService.getHomeData('service').then((res) => {
+    this.appService.getHomeData('professionalDevelopment').then((res) => {
       this.notData = true;
-      this.ourService = {
-        data: res.data,
-        heading: res.heading,
-        list: res.list
+      this.profe_dev = {
+        data: res
       }
-      console.log(this.ourService)
     }, (err) => {
-      Materialize.toast('Internal Server Error', 4000)
+      Materialize.toast('Internal Server Error', 4000);
     });
   }
 
-    edit() {
+  edit() {
     this.editMode = true;
     this.readMode = false;
     Materialize.updateTextFields();
@@ -51,11 +48,10 @@ export class ProfessionalDevelopment implements OnInit {
     this.readMode = true;
   }
 
-  submit(data) {
-    console.log("update data", data);
-    this.appService.updateData('service', data).then((res) => {
-      console.log("res");
-      Materialize.toast('Our Service component updated', 4000);
+  submit() {
+    let data = this.profe_dev["data"];
+    this.appService.updateData('professionalDevelopment', data).then((res) => {
+      Materialize.toast('Professional Development component updated', 4000);
       this.backToReadMode();
     });
   }

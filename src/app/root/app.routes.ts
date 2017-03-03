@@ -9,7 +9,7 @@ export const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'ourService', component: OurService },
-  { path: 'contact', component: ProfessionalDevelopment },
-  { path: 'professionalDevelopment', component: MyGoodSchool }
+  { path: 'myGoodSchool', component: MyGoodSchool },
+  { path: 'professionalDevelopment', component: ProfessionalDevelopment }
 ];
 

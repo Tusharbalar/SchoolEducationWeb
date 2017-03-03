@@ -1,36 +1,46 @@
-<h2>Contact Reactive Form</h2>
-
-<form (ngSubmit)="submitForm()" [formGroup]="contactForm" novalidate>
-  <div class="form-content">
-    <label>
-      Name:
-      <input type="text" formControlName="name" class="sd-form-control" placeholder="Enter your name.">
-    </label>
-    <label>
-      Email:
-      <input type="email" formControlName="email" class="sd-form-control" placeholder="Enter your email.">
-    </label>
-    <label>
-      Content:
-      <textarea formControlName="content" class="sd-form-control" placeholder="Content here."></textarea>
-    </label>
-    <div class="form-submit">
-      <button type="submit">Submit</button>
+<div class="preloader-wrapper active" *ngIf='!notData'>
+  <div class="spinner-layer spinner-red-only">
+    <div class="circle-clipper left">
+      <div class="circle"></div>
+    </div><div class="gap-patch">
+      <div class="circle"></div>
+    </div><div class="circle-clipper right">
+      <div class="circle"></div>
     </div>
   </div>
-</form>
-
-<div class="form-value">
-  Form value:
-  <pre>
-    {{contactForm.value | json}}
-  </pre>
-  <p>
-    Status: {{contactForm.status}}
-  </p>
-  <p>
-    Valid: {{contactForm.valid}}
-  </p>
-  <p>Submit then open console to see full form.</p>
 </div>
+
+<div class="container" style="padding-top:25px">
+  <div class="row" *ngIf="readMode">
+    <div class="col s10 offset-s6">
+      <a class="btn-floating waves-effect waves-light" (click)="edit()"  *ngIf='notData'>
+        <i class="material-icons">mode_edit</i>
+      </a>
+    </div>
+    <div class="col l10" *ngFor="let a of profe_dev.data">
+      <p><b>{{a.title}} </b> {{a.data}}</p>
+    </div>
+  </div>
+  <div class="row" *ngIf="editMode">
+    <form class="col s12">
+      <div class="row" *ngFor="let a of profe_dev.data; let i = index">
+        <div class="input-field col s12">
+          <textarea id="{{a.title[i]}}" class="materialize-textarea active" name="{{a.title}}" [(ngModel)]="a.title"> </textarea>
+          <label class="active" for="{{a.title[i]}}">Our Service: Data1</label>
+        </div>
+        <div class="input-field col s12">
+          <textarea id="{{a.data[i]}}" class="materialize-textarea active" name="{{a.data}}" [(ngModel)]="a.data"> </textarea>
+          <label class="active" for="{{a.title[i]}}">Our Service: Data2</label>
+        </div>
+      </div>
+      <a class="btn waves-effect waves-light" (click)="backToReadMode()">
+        <i class="material-icons left">arrow_back</i> Go Back
+      </a>
+      <a class="btn waves-effect waves-light" (click)="submit()">
+        Submit <i class="material-icons right">call_made</i>
+      </a>
+    </form>
+  </div>
+</div>
+
 
