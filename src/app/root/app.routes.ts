@@ -5,6 +5,7 @@ import { HomeComponent } from '../component/home/home.component';
 import { ProfessionalDevelopment } from '../component/professional-development/professional-development';
 import { MyGoodSchool } from '../component/my-good-school/school';
 import { SchoolAndClient } from '../component/school-and-client/school-and-client';
+import { Interns } from '../component/interns/interns';
 
 export const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -12,6 +13,7 @@ export const rootRouterConfig: Routes = [
   { path: 'ourService', component: OurService },
   { path: 'myGoodSchool', component: MyGoodSchool },
   { path: 'professionalDevelopment', component: ProfessionalDevelopment },
-  { path: 'schoolAndClient', component: SchoolAndClient }
+  { path: 'schoolAndClient', component: SchoolAndClient },
+  { path: 'interns', component: Interns }
 ];
 
