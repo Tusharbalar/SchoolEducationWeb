@@ -9,7 +9,7 @@ import { HttpModule } from '@angular/http';
 import { OurService } from '../component/our-service/our-service';
 import { HomeComponent } from '../component/home/home.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { ContactComponent } from '../component/contact/contact.component';
+import { ProfessionalDevelopment } from '../component/professional-development/professional-development';
 import { MyGoodSchool } from '../component/my-good-school/school';
 
 import { AppService } from '../service/app.service';
@@ -21,7 +21,7 @@ import { AngularFireModule } from 'angularfire2';
     AppComponent,
     OurService,
     HomeComponent,
-    ContactComponent,
+    ProfessionalDevelopment,
     MyGoodSchool
   ],
   imports: [
