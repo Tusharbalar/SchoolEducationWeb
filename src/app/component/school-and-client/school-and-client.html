@@ -17,36 +17,22 @@
         <i class="material-icons">mode_edit</i>
       </a>
     </div>
-    <div class="col l10">
-      <p><b>{{ourService.heading}}</b></p>
+    <div class="col l10" *ngFor="let a of schoolAndClient">
+      {{a.data}}  
     </div>
-    <div class="col l10"><p>{{ourService.list}}</p></div>
-    <div class="col l10"><p>{{ourService.data}}</p></div>
   </div>
   <div class="row" *ngIf="editMode">
     <form class="col s12">
       <div class="row">
-        <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea active" name="title" [(ngModel)]="ourService.heading"> </textarea>
-          <label class="active" for="textarea1">Our Service: Title</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea active" name="list" [(ngModel)]="ourService.list">    </textarea>
-          <label class="active" for="textarea1">Our Service: Data1</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="textarea1" class="materialize-textarea active" name="data" [(ngModel)]="ourService.data"> </textarea>
-          <label class="active" for="textarea1">Our Service: Data2</label>
+        <div class="input-field col s12" *ngFor="let a of schoolAndClient">
+          <textarea id="{{a.data[i]}}" class="materialize-textarea active" name="{{a.data}}" [(ngModel)]="a.data"> </textarea>
+          <label class="active" for="{{a.data[i]}}">Our Service: Title</label>
         </div>
       </div>
       <a class="btn waves-effect waves-light" (click)="backToReadMode()">
         <i class="material-icons left">arrow_back</i> Go Back
       </a>
-      <a class="btn waves-effect waves-light" (click)="submit(ourService)">
+      <a class="btn waves-effect waves-light" (click)="submit()">
         Submit <i class="material-icons right">call_made</i>
       </a>
     </form>

@@ -15,7 +15,7 @@ declare let $;
 export class SchoolAndClient implements OnInit {
 
   public notData: boolean = false;
-  public ourService = { };
+  public schoolAndClient;
 
   public readMode: boolean = true;
   public editMode: boolean = false;
@@ -25,20 +25,16 @@ export class SchoolAndClient implements OnInit {
   }
 
   ngOnInit() {
-    this.appService.getHomeData('service').then((res) => {
+    this.appService.getHomeData('SchoolClient').then((res) => {
       this.notData = true;
-      this.ourService = {
-        data: res.data,
-        heading: res.heading,
-        list: res.list
-      }
-      console.log(this.ourService)
+      this.schoolAndClient = res;
+      console.log(res)
     }, (err) => {
-      Materialize.toast('Internal Server Error', 4000)
+      Materialize.toast('Internal Server Error', 4000);
     });
   }
 
-    edit() {
+  edit() {
     this.editMode = true;
     this.readMode = false;
     Materialize.updateTextFields();
@@ -51,11 +47,11 @@ export class SchoolAndClient implements OnInit {
     this.readMode = true;
   }
 
-  submit(data) {
-    console.log("update data", data);
-    this.appService.updateData('service', data).then((res) => {
+  submit() {
+    console.log("update data", this.schoolAndClient);
+    this.appService.updateData('SchoolClient', this.schoolAndClient).then((res) => {
       console.log("res");
-      Materialize.toast('Our Service component updated', 4000);
+      Materialize.toast('School and client component updated', 4000);
       this.backToReadMode();
     });
   }
