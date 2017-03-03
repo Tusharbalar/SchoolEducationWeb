@@ -34,7 +34,7 @@ export class LearningForwardIndia implements OnInit {
     });
   }
 
-    edit() {
+  edit() {
     this.editMode = true;
     this.readMode = false;
     Materialize.updateTextFields();
@@ -47,10 +47,8 @@ export class LearningForwardIndia implements OnInit {
     this.readMode = true;
   }
 
-  submit(data) {
-    console.log("update data", data);
-    this.appService.updateData('learning-forward-india', data).then((res) => {
-      console.log("res");
+  submit() {
+    this.appService.updateData('learning-forward-india', this.learning_india).then((res) => {
       Materialize.toast('Learning forward india component updated', 4000);
       this.backToReadMode();
     });
