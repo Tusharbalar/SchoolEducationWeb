@@ -13,6 +13,7 @@ import { ProfessionalDevelopment } from '../component/professional-development/p
 import { MyGoodSchool } from '../component/my-good-school/school';
 import { SchoolAndClient } from '../component/school-and-client/school-and-client';
 import { Interns } from '../component/interns/interns';
+import { LearningForwardIndia } from '../component/learning-forward-india/learning-forward-india';
 
 import { AppService } from '../service/app.service';
 import { firebaseConfig } from '../service/firebase.config';
@@ -26,7 +27,8 @@ import { AngularFireModule } from 'angularfire2';
     ProfessionalDevelopment,
     MyGoodSchool,
     SchoolAndClient,
-    Interns
+    Interns,
+    LearningForwardIndia
   ],
   imports: [
     BrowserModule,

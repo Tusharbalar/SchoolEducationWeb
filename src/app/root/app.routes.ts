@@ -6,6 +6,7 @@ import { ProfessionalDevelopment } from '../component/professional-development/p
 import { MyGoodSchool } from '../component/my-good-school/school';
 import { SchoolAndClient } from '../component/school-and-client/school-and-client';
 import { Interns } from '../component/interns/interns';
+import { LearningForwardIndia } from '../component/learning-forward-india/learning-forward-india';
 
 export const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,6 +15,6 @@ export const rootRouterConfig: Routes = [
   { path: 'myGoodSchool', component: MyGoodSchool },
   { path: 'professionalDevelopment', component: ProfessionalDevelopment },
   { path: 'schoolAndClient', component: SchoolAndClient },
-  { path: 'interns', component: Interns }
+  { path: 'interns', component: Interns },
+  { path: 'learningForwardIndia', component: LearningForwardIndia }
 ];
-

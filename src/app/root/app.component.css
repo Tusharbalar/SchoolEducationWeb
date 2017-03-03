@@ -32,3 +32,7 @@ nav .brand-logo {
 nav {
  background-color: rgba(63, 81, 181, 0.74);
 }
+
+p {
+  white-space: pre-line;
+}
